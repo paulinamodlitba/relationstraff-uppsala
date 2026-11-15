@@ -77,6 +77,19 @@ button:focus-visible,textarea:focus-visible,input:focus-visible,a:focus-visible{
 .step textarea{width:100%;min-height:96px;margin-top:12px;font:15px/1.5 inherit;font-family:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 12px;resize:vertical}
 .hint{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .chip{font-size:12px;color:var(--ink);background:var(--nlbg);border-radius:20px;padding:2px 10px}
+.flow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:14px;counter-reset:f}
+.fbox{position:relative;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:26px 8px 8px;display:flex;flex-direction:column;gap:8px}
+.fbox:not(:last-child)::after{content:"→";position:absolute;right:-9px;top:50%;transform:translateY(-50%);color:var(--nl);font-size:13px;background:var(--surf);line-height:1;z-index:1}
+.fbox .fn{position:absolute;top:6px;left:9px;font-size:11px;font-weight:700;color:var(--nl)}
+.fbox textarea{min-height:84px;margin:0;font-size:13.5px;padding:7px 8px;border-radius:8px;background:var(--surf)}
+.mks{display:flex;flex-wrap:wrap;gap:4px}
+.mk{cursor:pointer}
+.mk input{position:absolute;opacity:0;pointer-events:none}
+.mk span{display:inline-block;font-size:10.5px;font-weight:600;border:1px solid var(--line);border-radius:20px;padding:1px 7px;color:var(--mut)}
+.mk input:checked+span{background:var(--nl);border-color:var(--nl);color:#fff}
+.mk input:focus-visible+span{outline:2px solid var(--acc);outline-offset:1px}
+@media(max-width:820px){.flow{grid-template-columns:repeat(3,minmax(0,1fr))}.fbox:nth-child(3n)::after{display:none}}
+@media(max-width:480px){.flow{grid-template-columns:repeat(2,minmax(0,1fr))}.fbox:nth-child(3n)::after{display:block}.fbox:nth-child(2n)::after{display:none}}
 .filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin-top:12px}
 .filters label{display:flex;gap:10px;align-items:flex-start;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:14px;cursor:pointer}
 .filters label b{display:block;font-weight:600;color:var(--ink)}
@@ -244,7 +257,8 @@ footer a{color:var(--mut)}
 <div class="step"><p class="rank">Steg 2 · Rita flödet <span class="time">15 min</span></p>
 <h3>Rita processen i 4 till 6 rutor</h3>
 <p>Grovt räcker. Markera <strong>var beslut fattas</strong>, <strong>var ni prioriterar</strong>, <strong>var det blir osäkert eller stressigt</strong> och <strong>var det blir extra manuellt jobb</strong>.</p>
-<textarea data-k="s2" placeholder="1. Kunden hör av sig → 2. Vi tar fram en offert → 3. …"></textarea></div>
+<div class="flow"><div class="fbox"><span class="fn">1</span><textarea data-k="p1" placeholder="Kunden hör av sig"></textarea><div class="mks"><label class="mk mk-b"><input type="checkbox" data-k="p1b"><span>Beslut</span></label><label class="mk mk-p"><input type="checkbox" data-k="p1p"><span>Prioritering</span></label><label class="mk mk-o"><input type="checkbox" data-k="p1o"><span>Osäkert</span></label><label class="mk mk-m"><input type="checkbox" data-k="p1m"><span>Manuellt</span></label></div></div><div class="fbox"><span class="fn">2</span><textarea data-k="p2" placeholder="Vi tar fram en offert"></textarea><div class="mks"><label class="mk mk-b"><input type="checkbox" data-k="p2b"><span>Beslut</span></label><label class="mk mk-p"><input type="checkbox" data-k="p2p"><span>Prioritering</span></label><label class="mk mk-o"><input type="checkbox" data-k="p2o"><span>Osäkert</span></label><label class="mk mk-m"><input type="checkbox" data-k="p2m"><span>Manuellt</span></label></div></div><div class="fbox"><span class="fn">3</span><textarea data-k="p3" placeholder="…"></textarea><div class="mks"><label class="mk mk-b"><input type="checkbox" data-k="p3b"><span>Beslut</span></label><label class="mk mk-p"><input type="checkbox" data-k="p3p"><span>Prioritering</span></label><label class="mk mk-o"><input type="checkbox" data-k="p3o"><span>Osäkert</span></label><label class="mk mk-m"><input type="checkbox" data-k="p3m"><span>Manuellt</span></label></div></div><div class="fbox"><span class="fn">4</span><textarea data-k="p4" placeholder="…"></textarea><div class="mks"><label class="mk mk-b"><input type="checkbox" data-k="p4b"><span>Beslut</span></label><label class="mk mk-p"><input type="checkbox" data-k="p4p"><span>Prioritering</span></label><label class="mk mk-o"><input type="checkbox" data-k="p4o"><span>Osäkert</span></label><label class="mk mk-m"><input type="checkbox" data-k="p4m"><span>Manuellt</span></label></div></div><div class="fbox"><span class="fn">5</span><textarea data-k="p5" placeholder="…"></textarea><div class="mks"><label class="mk mk-b"><input type="checkbox" data-k="p5b"><span>Beslut</span></label><label class="mk mk-p"><input type="checkbox" data-k="p5p"><span>Prioritering</span></label><label class="mk mk-o"><input type="checkbox" data-k="p5o"><span>Osäkert</span></label><label class="mk mk-m"><input type="checkbox" data-k="p5m"><span>Manuellt</span></label></div></div><div class="fbox"><span class="fn">6</span><textarea data-k="p6" placeholder="…"></textarea><div class="mks"><label class="mk mk-b"><input type="checkbox" data-k="p6b"><span>Beslut</span></label><label class="mk mk-p"><input type="checkbox" data-k="p6p"><span>Prioritering</span></label><label class="mk mk-o"><input type="checkbox" data-k="p6o"><span>Osäkert</span></label><label class="mk mk-m"><input type="checkbox" data-k="p6m"><span>Manuellt</span></label></div></div></div>
+<p class="score" style="margin-top:10px">Fyll i så många rutor du behöver, och kryssa i det som stämmer för varje steg.</p></div>
 
 <div class="step"><p class="rank">Steg 3 · AI:s roll <span class="time">20 min</span></p>
 <h3>Om AI hjälpte till här, hur skulle det se ut?</h3>
@@ -367,8 +381,9 @@ score();
 var msg=document.getElementById('msg');
 document.getElementById('copy').addEventListener('click',function(){
   var f=['Tydligt värde','Tillgång till data','Avgränsat','Mätbart'].filter(function(_,i){return data['f'+(i+1)]});
+  function flow(){var L={b:'beslut',p:'prioritering',o:'osäkert',m:'manuellt'};var out=[];for(var i=1;i<=6;i++){var t=(data['p'+i]||'').trim();if(!t)continue;var f=Object.keys(L).filter(function(k){return data['p'+i+k]}).map(function(k){return L[k]});out.push(i+'. '+t+(f.length?' ('+f.join(', ')+')':''))}return out.join('\n')}
   var roll={A:'A. Automatisera',B:'B. Beslutsstöd',C:'C. Något nytt'}[data.r]||'';
-  var txt='Från idé till nästa steg, Relationsträff Uppsala 19 nov 2026\n\n1. Processen:\n'+(data.s1||'')+'\n\n2. Flödet:\n'+(data.s2||'')+'\n\n3. AI:s roll'+(roll?' ('+roll+')':'')+':\n'+(data.s3||'')+'\nFilter: '+(f.join(', ')||'inga')+'\n\n4. Testa på en kollega:\n'+(data.s4||'')+'\n\n5. Första steget:\n'+(data.s5||'')+'\n';
+  var txt='Från idé till nästa steg, Relationsträff Uppsala 19 nov 2026\n\n1. Processen:\n'+(data.s1||'')+'\n\n2. Flödet:\n'+flow()+'\n\n3. AI:s roll'+(roll?' ('+roll+')':'')+':\n'+(data.s3||'')+'\nFilter: '+(f.join(', ')||'inga')+'\n\n4. Testa på en kollega:\n'+(data.s4||'')+'\n\n5. Första steget:\n'+(data.s5||'')+'\n';
   try{navigator.clipboard.writeText(txt).then(function(){msg.textContent='Kopierat! Klistra in i ett mejl till dig själv.'},function(){msg.textContent='Kunde inte kopiera, markera texten och kopiera själv.'})}catch(e){msg.textContent='Kunde inte kopiera.'}
 });
 var clr=document.getElementById('clear'),armed=false;
