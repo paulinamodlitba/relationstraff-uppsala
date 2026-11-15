@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arbetsblad: Från idé till nästa steg. Relationsträff Uppsala</title>
+<style>
+@page{size:A4;margin:12mm}
+:root{--ink:#0b0b0b;--ink2:#52514e;--mut:#898781;--line:rgba(11,11,11,.16);--warm:#eb6834;--nl:#8a5cd6;--nlbg:rgba(138,92,214,.08)}
+*{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{margin:0;background:#fff;color:var(--ink);font:10pt/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
+.page{width:186mm;margin:0 auto;padding:6mm 0}
+.page+.page{page-break-before:always;break-before:page}
+.kicker{font-size:7.5pt;letter-spacing:.09em;text-transform:uppercase;color:var(--mut);margin:0 0 2mm}
+h1{font-size:19pt;line-height:1.1;margin:0 0 1.5mm;letter-spacing:-.02em}
+h1 em{font-style:normal;color:var(--warm)}
+.sub{color:var(--ink2);margin:0 0 4mm;font-size:9.5pt}
+.namn{display:flex;gap:6mm;margin:0 0 4mm;font-size:8.5pt;color:var(--mut)}
+.namn span{flex:1;border-bottom:1px solid var(--line);padding-bottom:5mm}
+.box{border:1px solid var(--line);border-left:2.5pt solid var(--nl);border-radius:3mm;padding:3mm 4mm;margin-bottom:3mm;page-break-inside:avoid}
+.rank{font-size:7.5pt;letter-spacing:.07em;text-transform:uppercase;color:var(--nl);font-weight:700;margin:0 0 1mm}
+.rank i{font-style:normal;color:var(--mut);font-weight:600;margin-left:2mm}
+h2{font-size:11.5pt;margin:0 0 1mm;letter-spacing:-.01em}
+.box p{margin:0;color:var(--ink2);font-size:8.5pt}
+.chips{display:flex;flex-wrap:wrap;gap:1.5mm;margin-top:1.5mm}
+.chips span{font-size:7.5pt;background:var(--nlbg);border-radius:10pt;padding:.3mm 2.5mm}
+.lines{margin-top:2mm}
+.lines div{border-bottom:1px solid var(--line);height:7mm}
+.flow{display:grid;grid-template-columns:repeat(6,1fr);gap:2mm;margin-top:2.5mm}
+.flow div{border:1px dashed var(--mut);border-radius:2mm;height:36mm;position:relative}
+.flow div::before{content:attr(data-n);position:absolute;top:1mm;left:1.5mm;font-size:7pt;color:var(--mut);font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:1mm 4mm;margin-top:2mm;font-size:7.5pt;color:var(--ink2)}
+.legend b{color:var(--warm)}
+.abc{display:grid;grid-template-columns:repeat(3,1fr);gap:2mm;margin-top:2mm}
+.abc div{border:1px solid var(--line);border-radius:2mm;padding:2mm 2.5mm;font-size:7.5pt;color:var(--ink2);min-height:52mm}
+.abc div b{display:block;font-size:9pt;color:var(--ink);margin-bottom:.5mm}
+.abc div.c{border-color:var(--warm);box-shadow:0 0 0 .6pt var(--warm) inset}
+.abc div.c b{color:var(--warm)}
+.filt{display:flex;flex-wrap:wrap;gap:1.5mm 5mm;margin-top:2mm;font-size:8pt;color:var(--ink2)}
+.filt span::before{content:"";display:inline-block;width:3mm;height:3mm;border:1px solid var(--ink2);border-radius:.6mm;margin-right:1.5mm;vertical-align:-.5mm}
+ul{margin:1mm 0 0;padding-left:4.5mm;font-size:8.5pt;color:var(--ink2)}
+ul li{margin-bottom:.5mm}
+ul li b{color:var(--ink)}
+.foot{display:flex;justify-content:space-between;font-size:7.5pt;color:var(--mut);border-top:1px solid var(--line);padding-top:2mm;margin-top:2mm}
+.safe{font-size:7.5pt;color:var(--ink2);background:var(--nlbg);border-radius:2mm;padding:2mm 3mm;margin-top:1mm}
+@media screen{body{background:#f2f2ef}.page{background:#fff;padding:12mm;margin:8mm auto;width:210mm;box-shadow:0 2px 12px rgba(0,0,0,.08)}}
+</style>
+</head>
+<body>
+
+<div class="page">
+<p class="kicker">Relationsträff Uppsala · 19 november 2026 · Paulina Modlitba</p>
+<h1>Från idé till <em>nästa steg</em></h1>
+<p class="sub">Arbeta med ditt eget bolag. Utgå från något ni alltid gjort på samma sätt och se vad som blir möjligt när AI gör det billigare att göra annorlunda.</p>
+<div class="namn"><span>Namn</span><span>Bolag</span></div>
+
+<div class="box"><p class="rank">Steg 1 · Välj en process<i>10 min · själv</i></p>
+<h2>Vilken kundnära process har alltid gjorts på samma sätt?</h2>
+<p>Den ska återkomma ofta och påverka kunden.</p>
+<div class="chips"><span>Hur ni tar betalt</span><span>Hur ni säljer</span><span>Hur ni levererar</span><span>Hur kunden får svar</span><span>Vad kunden får göra själv</span></div>
+<div class="lines"><div></div><div></div></div></div>
+
+<div class="box"><p class="rank">Steg 2 · Rita flödet<i>15 min · själv</i></p>
+<h2>Rita processen i 4 till 6 rutor</h2>
+<p>Grovt räcker. Märk ut i rutorna:</p>
+<div class="legend"><span><b>B</b> = här fattas beslut</span><span><b>P</b> = här prioriterar vi</span><span><b>!</b> = osäkert eller stressigt</span><span><b>M</b> = extra manuellt jobb</span></div>
+<div class="flow"><div data-n="1"></div><div data-n="2"></div><div data-n="3"></div><div data-n="4"></div><div data-n="5"></div><div data-n="6"></div></div></div>
+
+<div class="box"><p class="rank">Steg 3 · AI:s roll<i>20 min · själv</i></p>
+<h2>Om AI hjälpte till här, hur skulle det se ut?</h2>
+<p>Skriv en idé per ruta. Lägg mest tid på C, där finns tillväxten.</p>
+<div class="abc">
+<div><b>A. Automatisera</b>Ta bort ett steg helt. Tydliga regler, låg osäkerhet.</div>
+<div><b>B. Beslutsstöd</b>Prioritera, sammanfatta, förklara, flagga risk. Människan har ansvaret.</div>
+<div class="c"><b>C. Något nytt</b>Nya erbjudanden, nya sätt att ta betalt, nya sätt för kunden att jobba.</div>
+</div>
+<p style="margin-top:2mm">Ringa in din bästa idé och kryssa i de filter den klarar:</p>
+<div class="filt"><span>Tydligt värde</span><span>Tillgång till data</span><span>Avgränsat, går att testa på veckor</span><span>Mätbart</span></div></div>
+
+<div class="foot"><span>Vänd för steg 4 och 5</span><span>Paulina Modlitba · pauspling.com</span></div>
+</div>
+
+<div class="page">
+<div class="box"><p class="rank">Steg 4 · Testa på en kollega<i>2 × 10 min · i par</i></p>
+<h2>Berätta idén för någon i rummet</h2>
+<p>Visa ditt flöde och berätta idén på två minuter. Sedan ställer kollegan frågor. Byt efter tio minuter.</p>
+<ul>
+<li><b>Vem vinner mest på det här,</b> kunden eller ni?</li>
+<li><b>Vad behöver vara sant</b> för att det ska fungera?</li>
+<li><b>Vad är det minsta sättet</b> att testa det på?</li>
+</ul>
+<p style="margin-top:2mm">Vad sa kollegan? Vad blev tydligare?</p>
+<div class="lines"><div></div><div></div><div></div><div></div><div></div></div></div>
+
+<div class="box"><p class="rank">Steg 5 · Första steget<i>5 min · själv</i></p>
+<h2>Vad gör du nästa vecka, och med vem?</h2>
+<p>Något litet och konkret: ett möte, ett test, ett samtal med en kund.</p>
+<div class="lines"><div></div><div></div><div></div></div>
+<div class="namn" style="margin-top:3mm;margin-bottom:0"><span>Med vem</span><span>Senast</span></div></div>
+
+<div class="box"><p class="rank">Reflektion · helgrupp<i>10 min</i></p>
+<h2>Vad tar vi med oss?</h2>
+<ul>
+<li>Var kan AI göra störst skillnad?</li>
+<li>Blev det automatisering, beslutsstöd eller något nytt?</li>
+<li>Vad blir viktigare för människorna?</li>
+</ul>
+<div class="lines"><div></div><div></div></div></div>
+
+<p class="safe"><b>När du testar med riktiga AI-verktyg:</b> ladda aldrig upp personnummer, löner eller medicinska uppgifter, och anonymisera riktiga filer först.</p>
+
+<div class="foot"><span>Allt från förmiddagen finns på paulinamodlitba.github.io/relationstraff-uppsala</span><span>Paulina Modlitba · pauspling.com</span></div>
+</div>
+
+</body>
+</html>

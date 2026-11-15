@@ -81,6 +81,7 @@ button:focus-visible,textarea:focus-visible,input:focus-visible,a:focus-visible{
 .filters label{display:flex;gap:10px;align-items:flex-start;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:14px;cursor:pointer}
 .filters label b{display:block;font-weight:600;color:var(--ink)}
 .filters label span{color:var(--mut);font-size:12.5px}
+.filters.roles{margin-bottom:4px}
 .filters input{accent-color:var(--nl);width:17px;height:17px;margin:2px 0 0;flex:none}
 .score{font-size:13px;color:var(--mut);margin-top:8px}
 .score b{color:var(--nl)}
@@ -211,28 +212,39 @@ footer a{color:var(--mut)}
 <!-- FÖRDJUPNINGEN -->
 <section id="fordjupning" role="tabpanel" hidden>
 <h2><span class="badge nl"></span>Från idé till nästa steg</h2>
-<p class="lede">Här arbetar du med <strong>ditt eget bolag</strong>. Skriv direkt här eller på arbetsbladet du fått. Det du skriver här sparas bara i din egen webbläsare.</p>
+<p class="lede">Här arbetar du med <strong>ditt eget bolag</strong>. Skriv direkt här, eller rita på <a href="arbetsblad.html" style="color:var(--acc)">arbetsbladet</a> och blädderblocket. Det du skriver här sparas bara i din egen webbläsare.</p>
 
 <div class="agenda">
 <div><span class="t">09.30</span><span>Intro</span></div>
-<div class="on2"><span class="t">09.40</span><span>1. Alltid samma sätt, på egen hand</span></div>
-<div class="on2"><span class="t">09.55</span><span>2. Om det vore billigt, på egen hand</span></div>
-<div class="on2"><span class="t">10.25</span><span>3. Testa på en kollega, i par</span></div>
-<div class="on2"><span class="t">10.45</span><span>4. Första steget, på egen hand</span></div>
-<div><span class="t">10.50</span><span>Några delar i helgrupp</span></div>
+<div class="on2"><span class="t">09.40</span><span>1. Välj en process, på egen hand</span></div>
+<div class="on2"><span class="t">09.50</span><span>2. Rita flödet, på egen hand</span></div>
+<div class="on2"><span class="t">10.05</span><span>3. AI:s roll, på egen hand</span></div>
+<div class="on2"><span class="t">10.25</span><span>4. Testa på en kollega, i par</span></div>
+<div class="on2"><span class="t">10.45</span><span>5. Första steget, på egen hand</span></div>
+<div><span class="t">10.50</span><span>Reflektion i helgrupp</span></div>
 </div>
 
 <div class="steps" style="margin-top:22px">
-<div class="step"><p class="rank">Steg 1 · Alltid samma sätt <span class="time">15 min</span></p>
-<h3>Vad i ert bolag har alltid gjorts på samma sätt?</h3>
-<p>Leta efter det ni gör av gammal vana, för att det var dyrt eller krångligt att göra annorlunda.</p>
-<div class="hint"><span class="chip">Hur ni tar betalt</span><span class="chip">Hur ni säljer</span><span class="chip">Hur ni levererar</span><span class="chip">Vem ni säljer till</span><span class="chip">Vad kunden får göra själv</span></div>
-<textarea data-k="s1" placeholder="Till exempel: vi tar betalt per timme, offerter skrivs för hand, kunden måste ringa oss…"></textarea></div>
+<div class="step"><p class="rank">Steg 1 · Välj en process <span class="time">10 min</span></p>
+<h3>Vilken kundnära process har alltid gjorts på samma sätt?</h3>
+<p>Välj en process som återkommer ofta och som påverkar kunden. Leta efter det ni gör av gammal vana, för att det var dyrt eller krångligt att göra annorlunda.</p>
+<div class="hint"><span class="chip">Hur ni tar betalt</span><span class="chip">Hur ni säljer</span><span class="chip">Hur ni levererar</span><span class="chip">Hur kunden får svar</span><span class="chip">Vad kunden får göra själv</span></div>
+<textarea data-k="s1" placeholder="Till exempel: offerter skrivs för hand, vi tar betalt per timme, kunden måste ringa oss…"></textarea></div>
 
-<div class="step"><p class="rank">Steg 2 · Om det vore billigt <span class="time">20 min</span></p>
-<h3>Vad skulle ni göra annorlunda om AI gjorde det nästan gratis?</h3>
-<p>Välj en sak från steg 1. Tänk tillväxt: ett nytt erbjudande, en ny kundgrupp, ett nytt sätt att ta betalt. Skriv gärna flera idéer och sålla sedan med filtren.</p>
-<textarea data-k="s2" placeholder="Om analys, text eller kundsupport kostade nästan ingenting skulle vi kunna…"></textarea>
+<div class="step"><p class="rank">Steg 2 · Rita flödet <span class="time">15 min</span></p>
+<h3>Rita processen i 4 till 6 rutor</h3>
+<p>Grovt räcker. Markera <strong>var beslut fattas</strong>, <strong>var ni prioriterar</strong>, <strong>var det blir osäkert eller stressigt</strong> och <strong>var det blir extra manuellt jobb</strong>.</p>
+<textarea data-k="s2" placeholder="1. Kunden hör av sig → 2. Vi tar fram en offert → 3. …"></textarea></div>
+
+<div class="step"><p class="rank">Steg 3 · AI:s roll <span class="time">20 min</span></p>
+<h3>Om AI hjälpte till här, hur skulle det se ut?</h3>
+<p>Gå igenom rutorna och fundera på vilken roll AI kan ta. Lägg mest tid på C, där finns tillväxten.</p>
+<div class="filters roles">
+<label><input type="radio" name="roll" data-k="r" value="A"><span><b>A. Automatisera</b><span>Ta bort ett steg helt. Tydliga regler, låg osäkerhet.</span></span></label>
+<label><input type="radio" name="roll" data-k="r" value="B"><span><b>B. Beslutsstöd</b><span>Prioritera, sammanfatta, förklara, flagga risk. Människan har ansvaret.</span></span></label>
+<label><input type="radio" name="roll" data-k="r" value="C"><span><b>C. Något nytt</b><span>Nya erbjudanden, nya sätt att ta betalt, nya sätt för kunden att jobba.</span></span></label>
+</div>
+<textarea data-k="s3" placeholder="AI skulle kunna… Det betyder för kunden att… Data vi behöver: …"></textarea>
 <p style="margin-top:14px"><strong>Sålla din bästa idé</strong></p>
 <div class="filters">
 <label><input type="checkbox" data-k="f1"><span><b>Tydligt värde</b><span>Sparar tid eller pengar, eller ger mer intäkter</span></span></label>
@@ -242,20 +254,29 @@ footer a{color:var(--mut)}
 </div>
 <p class="score" id="score"></p></div>
 
-<div class="step"><p class="rank">Steg 3 · Testa på en kollega <span class="time">2 × 10 min</span></p>
+<div class="step"><p class="rank">Steg 4 · Testa på en kollega <span class="time">2 × 10 min</span></p>
 <h3>Berätta idén för någon i rummet</h3>
-<p>Du har två minuter att berätta, sedan ställer kollegan frågor. Byt efter tio minuter. Frågor att ställa till varandra:</p>
+<p>Visa ditt flöde och berätta idén på två minuter, sedan ställer kollegan frågor. Byt efter tio minuter. Frågor att ställa till varandra:</p>
 <ul class="plain">
 <li><strong>Vem vinner mest på det här,</strong> kunden eller ni?</li>
 <li><strong>Vad behöver vara sant</strong> för att det ska fungera?</li>
 <li><strong>Vad är det minsta sättet</strong> att testa det på?</li>
 </ul>
-<textarea data-k="s3" placeholder="Vad sa kollegan? Vad blev tydligare?"></textarea></div>
+<textarea data-k="s4" placeholder="Vad sa kollegan? Vad blev tydligare?"></textarea></div>
 
-<div class="step"><p class="rank">Steg 4 · Första steget <span class="time">5 min</span></p>
+<div class="step"><p class="rank">Steg 5 · Första steget <span class="time">5 min</span></p>
 <h3>Vad gör du nästa vecka, och med vem?</h3>
 <p>Något litet och konkret: ett möte, ett test, ett samtal med en kund.</p>
-<textarea data-k="s4" placeholder="Nästa vecka ska jag…"></textarea></div>
+<textarea data-k="s5" placeholder="Nästa vecka ska jag…"></textarea></div>
+
+<div class="step"><p class="rank">Reflektion · Helgrupp <span class="time">10 min</span></p>
+<h3>Vad tar vi med oss?</h3>
+<ul class="plain">
+<li>Vilken process tittade du på?</li>
+<li>Var kan AI göra störst skillnad?</li>
+<li>Blev det automatisering, beslutsstöd eller något nytt?</li>
+<li>Vad blir viktigare för människorna?</li>
+</ul></div>
 </div>
 
 <div class="note"><strong>När du testar med riktiga AI-verktyg:</strong> ladda aldrig upp personnummer, löner eller medicinska uppgifter, och anonymisera riktiga filer först.</div>
@@ -322,6 +343,7 @@ var fields=document.querySelectorAll('[data-k]');
 fields.forEach(function(el){
   var k=el.dataset.k;
   if(el.type==='checkbox'){el.checked=!!data[k];el.addEventListener('change',function(){data[k]=el.checked;save();score()})}
+  else if(el.type==='radio'){el.checked=data[k]===el.value;el.addEventListener('change',function(){if(el.checked){data[k]=el.value;save()}})}
   else{el.value=data[k]||'';el.addEventListener('input',function(){data[k]=el.value;save()})}
 });
 function score(){
@@ -333,13 +355,14 @@ score();
 var msg=document.getElementById('msg');
 document.getElementById('copy').addEventListener('click',function(){
   var f=['Tydligt värde','Tillgång till data','Avgränsat','Mätbart'].filter(function(_,i){return data['f'+(i+1)]});
-  var txt='Från idé till nästa steg, Relationsträff Uppsala 19 nov 2026\n\n1. Alltid samma sätt:\n'+(data.s1||'')+'\n\n2. Om det vore billigt:\n'+(data.s2||'')+'\nFilter: '+(f.join(', ')||'inga')+'\n\n3. Testa på en kollega:\n'+(data.s3||'')+'\n\n4. Första steget:\n'+(data.s4||'')+'\n';
+  var roll={A:'A. Automatisera',B:'B. Beslutsstöd',C:'C. Något nytt'}[data.r]||'';
+  var txt='Från idé till nästa steg, Relationsträff Uppsala 19 nov 2026\n\n1. Processen:\n'+(data.s1||'')+'\n\n2. Flödet:\n'+(data.s2||'')+'\n\n3. AI:s roll'+(roll?' ('+roll+')':'')+':\n'+(data.s3||'')+'\nFilter: '+(f.join(', ')||'inga')+'\n\n4. Testa på en kollega:\n'+(data.s4||'')+'\n\n5. Första steget:\n'+(data.s5||'')+'\n';
   try{navigator.clipboard.writeText(txt).then(function(){msg.textContent='Kopierat! Klistra in i ett mejl till dig själv.'},function(){msg.textContent='Kunde inte kopiera, markera texten och kopiera själv.'})}catch(e){msg.textContent='Kunde inte kopiera.'}
 });
 var clr=document.getElementById('clear'),armed=false;
 clr.addEventListener('click',function(){
   if(!armed){armed=true;clr.textContent='Klicka igen för att rensa';setTimeout(function(){armed=false;clr.textContent='Rensa'},3000);return}
-  data={};save();fields.forEach(function(el){if(el.type==='checkbox')el.checked=false;else el.value=''});score();armed=false;clr.textContent='Rensa';msg.textContent='Rensat.';
+  data={};save();fields.forEach(function(el){if(el.type==='checkbox'||el.type==='radio')el.checked=false;else el.value=''});score();armed=false;clr.textContent='Rensa';msg.textContent='Rensat.';
 });
 })();
 </script>
